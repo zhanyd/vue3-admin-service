@@ -24,7 +24,7 @@ public class WebMvcConfig implements WebMvcConfigurer {
 	@Override
 	public void addInterceptors(InterceptorRegistry registry) {
 		registry.addInterceptor(new PermissionInterceptor()).addPathPatterns("/**")
-				.excludePathPatterns("/views/**", "/assets/**", "/user/getAsyncRoutes", "/user/login", "/",
+				.excludePathPatterns("/views/**", "/assets/**", "/user/login", "/",
 						"/swagger-resources/**", "/v3/api-docs", "/swagger-ui/**");
 	}
 

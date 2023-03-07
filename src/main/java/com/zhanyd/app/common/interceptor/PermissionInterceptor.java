@@ -5,6 +5,7 @@ import com.zhanyd.app.common.ApiResult;
 import com.zhanyd.app.common.util.JwtUtils;
 import com.zhanyd.app.common.util.StringHelp;
 
+import org.springframework.http.HttpMethod;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -25,6 +26,12 @@ public class PermissionInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception{
         System.out.println("in preHandle");
+
+        if (HttpMethod.OPTIONS.toString().equals(request.getMethod())) {
+            System.out.println("OPTIONS请求，放行");
+            return true;
+        }
+
         String token = request.getHeader("Authorization");
         System.out.println(request.getRequestURI());
         if(StringHelp.isEmpty(token)){
