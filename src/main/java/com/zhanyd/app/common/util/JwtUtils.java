@@ -39,7 +39,7 @@ public final class JwtUtils {
             Algorithm algorithm = Algorithm.HMAC256(SECRET);
             return JWT.create()
                     .withIssuer(ISS)
-                    .withExpiresAt(new Date(System.currentTimeMillis() + 1000 * 60 * 60))
+                    .withExpiresAt(new Date(System.currentTimeMillis() + 1000 * 60 * 60 * 3))
                     .withClaim("userId", userId)
                     .sign(algorithm);
         } catch (UnsupportedEncodingException | JWTCreationException exception) {

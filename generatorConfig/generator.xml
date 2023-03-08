@@ -20,7 +20,7 @@
 		<sqlMapGenerator targetPackage="com.zhanyd.app.mapping" targetProject="MAVEN"/>
 		<javaClientGenerator targetPackage="com.zhanyd.app.mapper" targetProject="MAVEN" type="XMLMAPPER" />
 
-		<table catalog="chatgpt_integrated" tableName="user_info" domainObjectName="UserInfo" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"/>
+		<table tableName="question" domainObjectName="Question" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"/>
 		<!-- <table catalog="canaan_reports" tableName="user_info" domainObjectName="UserInfo" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"/>
 		<table catalog="canaan_reports" tableName="user_role" domainObjectName="UserRole" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"/>
 		<table catalog="canaan_reports" tableName="identifying_code" domainObjectName="IdentifyingCode" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"/> -->
